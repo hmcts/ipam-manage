@@ -5,12 +5,12 @@
 # API endpoint URL
 base="https://ipam.hmcts.net"
 
+bearer_token=$(az account get-access-token --resource=api://3fa0259b-86c8-4cd7-bd2a-e5ab28625fe7 --query accessToken --output tsv)
 
 # Extract arguments
 http_method="$1"
-bearer_token="$2"
-json_body="$3"
-api="$4"
+json_body="$2"
+api="$3"
 
 url="$base$api"
 
@@ -35,7 +35,7 @@ delete_request() {
 }
 
 # Validate arguments
-if [[ $# -ne 4 ]]; then
+if [[ $# -ne 3 ]]; then
     echo "Usage: $0 [get|post|put|delete] <bearer_token> <json_body> <api>"
     exit 1
 fi

@@ -1,0 +1,1367 @@
+[
+  {
+    "name": "external1",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.55/32"
+  },
+  {
+    "name": "external2",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.9/32"
+  },
+  {
+    "name": "external3",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.201.0/24"
+  },
+  {
+    "name": "external4",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.1.224/27"
+  },
+  {
+    "name": "external5",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.176.128.0/19"
+  },
+  {
+    "name": "external6",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.196.0/24"
+  },
+  {
+    "name": "external7",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.251.14/32"
+  },
+  {
+    "name": "external8",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.0.55/32"
+  },
+  {
+    "name": "external9",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.128/32"
+  },
+  {
+    "name": "external10",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.55/32"
+  },
+  {
+    "name": "external11",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.15.96/27"
+  },
+  {
+    "name": "external12",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.3.64/27"
+  },
+  {
+    "name": "external13",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.251.14/32"
+  },
+  {
+    "name": "external14",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.200.0/24"
+  },
+  {
+    "name": "external15",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.232.32.0/21"
+  },
+  {
+    "name": "external16",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.72.0.0/22"
+  },
+  {
+    "name": "external17",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.192.0/24"
+  },
+  {
+    "name": "external18",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.251.15/32"
+  },
+  {
+    "name": "external19",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.11.74.0/27"
+  },
+  {
+    "name": "external20",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.33/32"
+  },
+  {
+    "name": "external21",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.33.0/24"
+  },
+  {
+    "name": "external22",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.32.0/24"
+  },
+  {
+    "name": "external23",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.13.224/27"
+  },
+  {
+    "name": "external24",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.171.0.0/16"
+  },
+  {
+    "name": "external25",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.251.15/32"
+  },
+  {
+    "name": "external26",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.197.0/24"
+  },
+  {
+    "name": "external27",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.35/32"
+  },
+  {
+    "name": "external28",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.100.36.21/32"
+  },
+  {
+    "name": "external29",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.251.4/32"
+  },
+  {
+    "name": "external30",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.251.13/32"
+  },
+  {
+    "name": "external31",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.13.128/27"
+  },
+  {
+    "name": "external32",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.210.0/24"
+  },
+  {
+    "name": "external33",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.12/32"
+  },
+  {
+    "name": "external34",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.54/32"
+  },
+  {
+    "name": "external35",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.188.0.0/16"
+  },
+  {
+    "name": "external36",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.10/32"
+  },
+  {
+    "name": "external37",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.255.1/32"
+  },
+  {
+    "name": "external38",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.14.32/27"
+  },
+  {
+    "name": "external39",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.16/32"
+  },
+  {
+    "name": "external40",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.251.13/32"
+  },
+  {
+    "name": "external41",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.1.249/32"
+  },
+  {
+    "name": "external42",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.12.96/27"
+  },
+  {
+    "name": "external43",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.35/32"
+  },
+  {
+    "name": "external44",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.20/32"
+  },
+  {
+    "name": "external45",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.7/32"
+  },
+  {
+    "name": "external46",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.200.64.0/20"
+  },
+  {
+    "name": "external47",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.72.4.0/22"
+  },
+  {
+    "name": "external48",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.176.192.0/19"
+  },
+  {
+    "name": "external49",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.104.220.0/26"
+  },
+  {
+    "name": "external50",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.206.0/24"
+  },
+  {
+    "name": "external51",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.176.160.0/19"
+  },
+  {
+    "name": "external52",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.15.0/27"
+  },
+  {
+    "name": "external53",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.176.96.0/19"
+  },
+  {
+    "name": "external54",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.176.0.0/19"
+  },
+  {
+    "name": "external55",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.176.32.0/19"
+  },
+  {
+    "name": "external56",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.209.0/24"
+  },
+  {
+    "name": "external57",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.176.64.0/19"
+  },
+  {
+    "name": "external58",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.136.2.0/25"
+  },
+  {
+    "name": "external59",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.8/32"
+  },
+  {
+    "name": "external60",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.100.0.0/18"
+  },
+  {
+    "name": "external61",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.68/32"
+  },
+  {
+    "name": "external62",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.18.116.0/24"
+  },
+  {
+    "name": "external63",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.211.0/24"
+  },
+  {
+    "name": "external64",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.195.0/24"
+  },
+  {
+    "name": "external65",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.175.254.0/24"
+  },
+  {
+    "name": "external66",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.225/32"
+  },
+  {
+    "name": "external67",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.198.0/24"
+  },
+  {
+    "name": "external68",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.5.128/27"
+  },
+  {
+    "name": "external69",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.175.255.0/24"
+  },
+  {
+    "name": "external70",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.199.0/24"
+  },
+  {
+    "name": "external71",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.193.0/24"
+  },
+  {
+    "name": "external72",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.132/32"
+  },
+  {
+    "name": "external73",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.202.0/24"
+  },
+  {
+    "name": "external74",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.208.0/24"
+  },
+  {
+    "name": "external75",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.194.0/24"
+  },
+  {
+    "name": "external76",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.251.6/32"
+  },
+  {
+    "name": "external77",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.203.0/24"
+  },
+  {
+    "name": "external78",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.18.36.0/24"
+  },
+  {
+    "name": "external79",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.204.0/24"
+  },
+  {
+    "name": "external80",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.207.0/24"
+  },
+  {
+    "name": "external81",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.18.37.0/24"
+  },
+  {
+    "name": "external82",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.205.0/24"
+  },
+  {
+    "name": "external83",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.132.1.0/24"
+  },
+  {
+    "name": "external84",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.3.35.0/24"
+  },
+  {
+    "name": "external85",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.22.16.0/24"
+  },
+  {
+    "name": "external86",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.7.37.0/25"
+  },
+  {
+    "name": "external87",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.22.17.0/24"
+  },
+  {
+    "name": "external88",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.22.2.0/24"
+  },
+  {
+    "name": "external89",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.22.3.0/24"
+  },
+  {
+    "name": "external90",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.134/32"
+  },
+  {
+    "name": "external91",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.138/32"
+  },
+  {
+    "name": "external92",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.135/32"
+  },
+  {
+    "name": "external93",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.251.10/32"
+  },
+  {
+    "name": "external94",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.254.132/32"
+  },
+  {
+    "name": "external95",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.205/32"
+  },
+  {
+    "name": "external96",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.255.197/32"
+  },
+  {
+    "name": "external97",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.251.7/32"
+  },
+  {
+    "name": "external98",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.61/32"
+  },
+  {
+    "name": "external99",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.62/32"
+  },
+  {
+    "name": "external100",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.251.8/32"
+  },
+  {
+    "name": "external101",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.22.0.5/32"
+  },
+  {
+    "name": "external102",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.251.9/32"
+  },
+  {
+    "name": "external103",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.12.224/27"
+  },
+  {
+    "name": "external104",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.251.4/32"
+  },
+  {
+    "name": "external105",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.1.254/32"
+  },
+  {
+    "name": "external106",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.254.131/32"
+  },
+  {
+    "name": "external107",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.100.36.16/32"
+  },
+  {
+    "name": "external108",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.100.36.59/32"
+  },
+  {
+    "name": "external109",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.100.36.19/32"
+  },
+  {
+    "name": "external110",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.254.130/32"
+  },
+  {
+    "name": "external111",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.100.36.17/32"
+  },
+  {
+    "name": "external112",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.235.148.0/23"
+  },
+  {
+    "name": "external113",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.234.220.0/22"
+  },
+  {
+    "name": "external114",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.5.14.0/24"
+  },
+  {
+    "name": "external115",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.228/32"
+  },
+  {
+    "name": "external116",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.12.32/27"
+  },
+  {
+    "name": "external117",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.1.80.0/24"
+  },
+  {
+    "name": "external118",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.5.38.0/24"
+  },
+  {
+    "name": "external119",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.14/32"
+  },
+  {
+    "name": "external120",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.16.1.0/24"
+  },
+  {
+    "name": "external121",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.128.28.0/24"
+  },
+  {
+    "name": "external122",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.9.0/27"
+  },
+  {
+    "name": "external123",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.232.90.0/23"
+  },
+  {
+    "name": "external124",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.128.32.0/25"
+  },
+  {
+    "name": "external125",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.254.130/32"
+  },
+  {
+    "name": "external126",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.6.40.0/24"
+  },
+  {
+    "name": "external127",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.132.25.128/25"
+  },
+  {
+    "name": "external128",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.232.84.0/22"
+  },
+  {
+    "name": "external129",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.8.224/27"
+  },
+  {
+    "name": "external130",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.6.41.0/24"
+  },
+  {
+    "name": "external131",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.12.17.0/24"
+  },
+  {
+    "name": "external132",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.235.80.0/22"
+  },
+  {
+    "name": "external133",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.138.7.0/24"
+  },
+  {
+    "name": "external134",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.232.31.128/25"
+  },
+  {
+    "name": "external135",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.18.138.0/24"
+  },
+  {
+    "name": "external136",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.1.118.128/25"
+  },
+  {
+    "name": "external137",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.3.128/27"
+  },
+  {
+    "name": "external138",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.12.0/27"
+  },
+  {
+    "name": "external139",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.13.64/26"
+  },
+  {
+    "name": "external140",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.15.0/27"
+  },
+  {
+    "name": "external141",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.16.96/27"
+  },
+  {
+    "name": "external142",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.216/32"
+  },
+  {
+    "name": "external143",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.12.128/27"
+  },
+  {
+    "name": "external144",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.15.32/27"
+  },
+  {
+    "name": "external145",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.13.160/27"
+  },
+  {
+    "name": "external146",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.16.32/27"
+  },
+  {
+    "name": "external147",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.12.64/27"
+  },
+  {
+    "name": "external148",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.14.32/27"
+  },
+  {
+    "name": "external149",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.12.192/27"
+  },
+  {
+    "name": "external150",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.0.54/32"
+  },
+  {
+    "name": "external151",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.15.128/27"
+  },
+  {
+    "name": "external152",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.192.0.0/16"
+  },
+  {
+    "name": "external153",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.13.224/27"
+  },
+  {
+    "name": "external154",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.15.64/27"
+  },
+  {
+    "name": "external155",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.13.0/26"
+  },
+  {
+    "name": "external156",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.12.160/27"
+  },
+  {
+    "name": "external157",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.88.144.0/20"
+  },
+  {
+    "name": "external158",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.181.0.0/16"
+  },
+  {
+    "name": "external159",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.69/32"
+  },
+  {
+    "name": "external160",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.72/29"
+  },
+  {
+    "name": "external161",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.4.128/27"
+  },
+  {
+    "name": "external162",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.3.128/27"
+  },
+  {
+    "name": "external163",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.210/32"
+  },
+  {
+    "name": "external164",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.254.129/32"
+  },
+  {
+    "name": "external165",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.14/32"
+  },
+  {
+    "name": "external166",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.109/32"
+  },
+  {
+    "name": "external167",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.11.128/27"
+  },
+  {
+    "name": "external168",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.216/32"
+  },
+  {
+    "name": "external169",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.209/32"
+  },
+  {
+    "name": "external170",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.16.64/27"
+  },
+  {
+    "name": "external171",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.108/30"
+  },
+  {
+    "name": "external172",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.54/32"
+  },
+  {
+    "name": "external173",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.34/32"
+  },
+  {
+    "name": "external174",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.15.64/27"
+  },
+  {
+    "name": "external175",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.17/32"
+  },
+  {
+    "name": "external176",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.11/32"
+  },
+  {
+    "name": "external177",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.22.0.6/32"
+  },
+  {
+    "name": "external178",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.53/32"
+  },
+  {
+    "name": "external179",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.109/32"
+  },
+  {
+    "name": "external180",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.110/32"
+  },
+  {
+    "name": "external181",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.129/32"
+  },
+  {
+    "name": "external182",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.239.0/28"
+  },
+  {
+    "name": "external183",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.12/32"
+  },
+  {
+    "name": "external184",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.111/32"
+  },
+  {
+    "name": "external185",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.254.128/32"
+  },
+  {
+    "name": "external186",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.254.133/32"
+  },
+  {
+    "name": "external187",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.108/32"
+  },
+  {
+    "name": "external188",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.53/32"
+  },
+  {
+    "name": "external189",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.6/32"
+  },
+  {
+    "name": "external190",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.12.160/27"
+  },
+  {
+    "name": "external191",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.218/32"
+  },
+  {
+    "name": "external192",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.9/32"
+  },
+  {
+    "name": "external193",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.175.0.0/19"
+  },
+  {
+    "name": "external194",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.225.32/32"
+  },
+  {
+    "name": "external195",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.218/32"
+  },
+  {
+    "name": "external196",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.251.12/32"
+  },
+  {
+    "name": "external197",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.209/32"
+  },
+  {
+    "name": "external198",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.15/32"
+  },
+  {
+    "name": "external199",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.10/32"
+  },
+  {
+    "name": "external200",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.3.160/27"
+  },
+  {
+    "name": "external201",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.219/32"
+  },
+  {
+    "name": "external202",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.219/32"
+  },
+  {
+    "name": "external203",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.254.1/32"
+  },
+  {
+    "name": "external204",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.249.0/27"
+  },
+  {
+    "name": "external205",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.217/32"
+  },
+  {
+    "name": "external206",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.210/32"
+  },
+  {
+    "name": "external207",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.198/32"
+  },
+  {
+    "name": "external208",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.8.0/27"
+  },
+  {
+    "name": "external209",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.13/32"
+  },
+  {
+    "name": "external210",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.15.96/27"
+  },
+  {
+    "name": "external211",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.227/32"
+  },
+  {
+    "name": "external212",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.249.160/27"
+  },
+  {
+    "name": "external213",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.3.160/27"
+  },
+  {
+    "name": "external214",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.175.32.0/19"
+  },
+  {
+    "name": "external215",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.217/32"
+  },
+  {
+    "name": "external216",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.251.12/32"
+  },
+  {
+    "name": "external217",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.1.250/32"
+  },
+  {
+    "name": "external218",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.34/32"
+  },
+  {
+    "name": "external219",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.100.36.13/32"
+  },
+  {
+    "name": "external220",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.32/32"
+  },
+  {
+    "name": "external221",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.25/32"
+  },
+  {
+    "name": "external222",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.136/32"
+  },
+  {
+    "name": "external223",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.255.70/32"
+  },
+  {
+    "name": "external224",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.19/32"
+  },
+  {
+    "name": "external225",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.0/26"
+  },
+  {
+    "name": "external226",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.172.0.0/16"
+  },
+  {
+    "name": "external227",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.12.64/27"
+  },
+  {
+    "name": "external228",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.13.128/27"
+  },
+  {
+    "name": "external229",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.2.253/32"
+  },
+  {
+    "name": "external230",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.13.0/27"
+  },
+  {
+    "name": "external231",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.15.128/27"
+  },
+  {
+    "name": "external232",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.12.224/27"
+  },
+  {
+    "name": "external233",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.12.0/27"
+  },
+  {
+    "name": "external234",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.12.96/27"
+  },
+  {
+    "name": "external235",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.15.32/27"
+  },
+  {
+    "name": "external236",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.13.32/27"
+  },
+  {
+    "name": "external237",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.13.160/27"
+  },
+  {
+    "name": "external238",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.12.192/27"
+  },
+  {
+    "name": "external239",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.12.32/27"
+  },
+  {
+    "name": "external240",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.12.128/27"
+  },
+  {
+    "name": "external241",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.176.255.0/24"
+  },
+  {
+    "name": "external242",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.176.254.0/24"
+  },
+  {
+    "name": "external243",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.144/29"
+  },
+  {
+    "name": "external244",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.1.253/32"
+  },
+  {
+    "name": "external245",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.175.128.0/19"
+  },
+  {
+    "name": "external246",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.175.192.0/19"
+  },
+  {
+    "name": "external247",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.175.160.0/19"
+  },
+  {
+    "name": "external248",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.175.64.0/19"
+  },
+  {
+    "name": "external249",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.175.96.0/19"
+  },
+  {
+    "name": "external250",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.16.128/27"
+  },
+  {
+    "name": "external251",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.16.0/27"
+  },
+  {
+    "name": "external252",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.200.0.0/16"
+  },
+  {
+    "name": "external253",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.201.0.0/16"
+  },
+  {
+    "name": "external254",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.11.32/27"
+  },
+  {
+    "name": "external255",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.182.0.0/16"
+  },
+  {
+    "name": "external256",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.136.64.0/18"
+  },
+  {
+    "name": "external257",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.3.32/27"
+  },
+  {
+    "name": "external258",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.9.64/27"
+  },
+  {
+    "name": "external259",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.23.3.192/27"
+  },
+  {
+    "name": "external260",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.9.128/27"
+  },
+  {
+    "name": "external261",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.8.192/27"
+  },
+  {
+    "name": "external262",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.3.64/27"
+  },
+  {
+    "name": "external263",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.3.32/27"
+  },
+  {
+    "name": "external264",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.11.0/27"
+  },
+  {
+    "name": "external265",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.8.64/27"
+  },
+  {
+    "name": "external266",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.3.192/27"
+  },
+  {
+    "name": "external267",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.8.160/27"
+  },
+  {
+    "name": "external268",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.9.96/27"
+  },
+  {
+    "name": "external269",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.8.128/27"
+  },
+  {
+    "name": "external270",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.5.128/27"
+  },
+  {
+    "name": "external271",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.8.32/27"
+  },
+  {
+    "name": "external272",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.25.8.96/27"
+  },
+  {
+    "name": "external273",
+    "desc": "VirtualNetworkGateway",
+    "cidr": "10.24.0.248/29"
+  }
+]

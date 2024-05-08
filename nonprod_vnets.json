@@ -1,5 +1,14 @@
 [
-    "aa",
-    "ss"
-    
+    "/subscriptions/fb084706-583f-4c9a-bdab-949aac66ba5c/resourceGroups/hmcts-dmz-nonprodi/providers/Microsoft.Network/virtualNetworks/hmcts-dmz-nonprodi",
+    "/subscriptions/fb084706-583f-4c9a-bdab-949aac66ba5c/resourceGroups/hmcts-hub-nonprodi/providers/Microsoft.Network/virtualNetworks/hmcts-hub-nonprodi",
+    "/subscriptions/fb084706-583f-4c9a-bdab-949aac66ba5c/resourceGroups/hmcts-virtualwan-nonprod/providers/Microsoft.Network/virtualNetworks/hmcts-cloudgateway-vnet-nonprod",
+    "/subscriptions/fb084706-583f-4c9a-bdab-949aac66ba5c/resourceGroups/private-dns-resolver-uksouth-nonprodi/providers/Microsoft.Network/virtualNetworks/private-dns-resolver-uksouth-vnet-nonprodi",
+    "/subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/darts-test-rg/providers/Microsoft.Network/virtualNetworks/modernisation-vnet",
+    "/subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/dc-test-rg/providers/Microsoft.Network/virtualNetworks/dc-vnet-test",
+    "/subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/hmi-sharedinfra-test-rg/providers/Microsoft.Network/virtualNetworks/hmi-sharedinfra-vnet-test",
+    "/subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/mi-test-rg/providers/Microsoft.Network/virtualNetworks/mi-vnet-test",
+    "/subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/pre-test/providers/Microsoft.Network/virtualNetworks/pre-vnet01-test",
+    "/subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/ss-test-network-rg/providers/Microsoft.Network/virtualNetworks/ss-test-vnet",
+    "/subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/vh-infra-wowza-test/providers/Microsoft.Network/virtualNetworks/vh-infra-wowza-test",
+    "/subscriptions/3eec5bde-7feb-4566-bfb6-805df6e10b90/resourceGroups/vh-perf-test-test/providers/Microsoft.Network/virtualNetworks/vh-perf-test-test"
 ]

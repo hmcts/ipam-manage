@@ -1,38 +1,68 @@
 #!/bin/bash
 
-token=$(az account get-access-token --resource=api://3fa0259b-86c8-4cd7-bd2a-e5ab28625fe7 --query accessToken --output tsv)
+# This scirpt only need to run when we setup ipam for the first time, this does not need to run periodically.
 
+function add_spaces(){
+    space=$1
+    desc=$2
+    ./function.sh post '{"name": "'"$space"'", "desc": "'"$desc"'"}' "/api/spaces"
+    echo -e "\n"
+}
 
-# SBOX create space and  blcok
-space="hmcts_sbox"
-./function.sh post $token '{"name": "'"$space"'", "desc": "This space is for HMCTS sandbox blocks"}' "/api/spaces"
-block1="hmcts_sbox"
-./function.sh post $token '{"name": "'"$block1"'", "cidr": "10.0.0.0/8"}' "/api/spaces/$space/blocks"
+function add_blocks(){
+    space=$1
+    block=$2
+    cidr=$3
+    ./function.sh post '{"name": "'"$block"'", "cidr": "'"$cidr"'"}' "/api/spaces/$space/blocks"
+    echo -e "\n"
+}
 
-json_data=$(<sbox_vnets.json)
+function associate_vnets(){
+    space=$1
+    block=$2
+    jsonfile=$3
+    ./function.sh put "$(cat $jsonfile)"  "/api/spaces/$space/blocks/$block/networks"
+    echo -e "\n"
+}
 
-./function.sh put $token "$json_data" "/api/spaces/$space/blocks/$block1/networks"
+function setup(){
 
-# NONPROD create space and  blcok
-space="hmcts_nonprod"
-./function.sh post $token '{"name": "'"$space"'", "desc": "This space is for HMCTS nonprod blocks"}' "/api/spaces"
-# create blocks of cidr
-block1="hmcts_nonprod"
-./function.sh post $token '{"name": "'"$block1"'", "cidr": "10.0.0.0/8"}' "/api/spaces/$space/blocks"
+    # create space and  block
+    env=$1
+    desc="This space is for HMCTS $env blocks"
+    add_spaces $env "$desc"
 
+    block_10="$env""_10"
+    cidr_10="10.0.0.0/8"
+    add_blocks $env $block_10 $cidr_10
 
-# PROD create space and  blcok
-space="hmcts_prod"
-./function.sh post $token '{"name": "'"$space"'", "desc": "This space is for HMCTS prod blocks"}' "/api/spaces"
-# create blocks of cidr
-block1="hmcts_prod"
-./function.sh post $token '{"name": "'"$block1"'", "cidr": "10.0.0.0/8"}' "/api/spaces/$space/blocks"
+    # associate blocks to vnets
+    jsonfile="$env""_vnets.json"
+    associate_vnets $env $block_10 $jsonfile
 
+    block_172="$env""_172"
+    cidr_172="172.0.0.0/8"
+    add_blocks $env $block_172 $cidr_172
 
+    block_163="$env""_163"
+    cidr_163="163.0.0.0/8"
+    add_blocks $env $block_163 $cidr_163
 
-'[
-    "/subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/hmcts-hub-sbox-int/providers/Microsoft.Network/virtualNetworks/hmcts-hub-sbox-int",
-    "/subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/panorama-sbox-uks-rg/providers/Microsoft.Network/virtualNetworks/panorama-sbox-uks-vnet",
-    "/subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/pkr-Resource-Group-mbjbuyjs7k/providers/Microsoft.Network/virtualNetworks/pkrvnmbjbuyjs7k",
-    "/subscriptions/ea3a8c1e-af9d-4108-bc86-a7e2d267f49c/resourceGroups/private-dns-resolver-uksouth-sbox-int/providers/Microsoft.Network/virtualNetworks/private-dns-resolver-uksouth-vnet-sbox-int"
-]'
+    block_198="$env""_198"
+    cidr_198="198.0.0.0/8"
+    add_blocks $env $block_198 $cidr_198
+
+    block_192="$env""_192"
+    cidr_192="192.0.0.0/8"
+    add_blocks $env $block_192 $cidr_192
+
+}
+
+# SBOX create space and  block and associate vnets
+setup "sbox"
+
+# NONPROD create space and  block
+setup "nonprod"
+
+# PROD create space and  block
+setup "prod"
