@@ -14,6 +14,8 @@ api="$3"
 
 url="$base$api"
 
+getstatus="$base""/api/status"
+
 # Make a GET request
 get_request() {
     curl -X GET -H "Authorization: Bearer $bearer_token" "$url"
@@ -34,22 +36,36 @@ delete_request() {
     curl -X DELETE -H "Authorization: Bearer $bearer_token" -H "Content-Type: application/json" -d "$json_body" "$url"
 }
 
+# Make a DELETE request
+get_status() {
+    response=$(curl -X GET -H "Authorization: Bearer $bearer_token" "$getstatus")
+    echo "$response";
+}
+
 # Validate arguments
 if [[ $# -ne 3 ]]; then
     echo "Usage: $0 [get|post|put|delete] <bearer_token> <json_body> <api>"
     exit 1
 fi
 
-# Execute the appropriate request
-case "$http_method" in
-    get)
-        get_request ;;
-    post)
-        post_request ;;
-    put)
-        put_request ;;
-    delete)
-        delete_request ;;
-    *)
-        echo "Invalid HTTP method. Supported methods: get, post, put, delete" ;;
-esac
+status=$(get_status)
+
+
+if [[ -z $status ]]; then
+        echo "Cannot connect to IPAM apis!"
+else
+        # Execute the appropriate request
+        case "$http_method" in
+            get)
+                get_request ;;
+            post)
+                post_request ;;
+            put)
+                put_request ;;
+            delete)
+                delete_request ;;
+            *)
+                echo "Invalid HTTP method. Supported methods: get, post, put, delete" ;;
+        esac
+fi
+
