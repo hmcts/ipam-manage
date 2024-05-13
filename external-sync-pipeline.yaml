@@ -18,7 +18,7 @@ variables:
 
 
 jobs:
-  - job: Run External cidr script
+  - job: RunExternalScript
     timeoutInMinutes: 20
     pool:
       name: 'hmcts-cftptl-agent-pool'
