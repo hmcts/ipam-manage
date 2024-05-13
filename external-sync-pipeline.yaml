@@ -1,0 +1,31 @@
+---
+name: Sync External CIDRs
+trigger: none
+pr:
+ - master
+schedules:
+  - cron: '0 3 * * *'
+    displayName: Runs 3 AM everyday
+    branches:
+      include:
+        - master
+    always: 'true'
+
+
+variables:
+  - name: service_connection
+    value: dts-management-prod-intsvc
+
+
+jobs:
+  - job: Run External cidr script
+    timeoutInMinutes: 20
+    pool:
+      name: 'hmcts-cftptl-agent-pool'
+    steps:
+      - task: AzureCLI@2
+        displayName: 'Service Principal Check - Dev Tenant'
+        inputs:
+          scriptType: bash
+          scriptPath: ./external.sh
+          azureSubscription: ${{ variables.dev_service_connection }}
