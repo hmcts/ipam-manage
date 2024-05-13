@@ -1,21 +1,10 @@
 ---
-name: Sync External CIDRs
+name: IPAM management
 trigger:
   batch: true
   branches:
     include:
-    - master
-  paths:
-    include:
-      - ./external.sh
-      - external-sync-pipeline.yaml
-schedules:
-  - cron: '0 3 * * *'
-    displayName: Runs 3 AM everyday
-    branches:
-      include:
-        - master
-    always: 'true'
+      - master
 
 pr: none # Disable pull request triggers.
 
@@ -23,13 +12,18 @@ variables:
   - name: service_connection
     value: dts-management-prod-intsvc
 
-
 jobs:
   - job: RunExternalScript
     timeoutInMinutes: 20
     pool:
       name: 'hmcts-cftptl-agent-pool'
     steps:
+      - task: AzureCLI@2
+        displayName: 'Run ipam manage script'
+        inputs:
+          scriptType: bash
+          scriptPath: ./ipam.sh
+          azureSubscription: ${{ variables.service_connection }}
       - task: AzureCLI@2
         displayName: 'Run External Script'
         inputs:
