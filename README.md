@@ -26,7 +26,7 @@ You will need name of the space and block when you are querying APIs.
 
 ## APIs
 
-In order to access the IPAM apis, you will need to make sure you are connected to the F5 VPN or you can access from the internal VMs e.g. `bastion-prod
+In order to access the IPAM apis, you will need to make sure you are **connected to the F5 VPN** or you can access from the internal VMs e.g. `bastion-prod
 `
 
 To access the APIs, this is the base URL to use - https://ipam.hmcts.net/  and then you can select which API you would like to access from this document list here - https://ipam.hmcts.net/api/docs
