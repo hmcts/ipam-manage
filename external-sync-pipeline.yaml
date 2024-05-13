@@ -1,5 +1,5 @@
 ---
-name: Sync External CIDRs
+name: IPAM - Sync External CIDRs
 trigger:
   batch: true
   branches:
