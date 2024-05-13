@@ -4,5 +4,6 @@
     "/subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/hmcts-dmz-prod-int/providers/Microsoft.Network/virtualNetworks/hmcts-dmz-prod-int",
     "/subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/hmcts-hub-prod-int/providers/Microsoft.Network/virtualNetworks/hmcts-hub-prod-int",
     "/subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/panorama-prod-uks-rg/providers/Microsoft.Network/virtualNetworks/panorama-prod-uks-vnet",
-    "/subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/private-dns-resolver-uksouth-prod-int/providers/Microsoft.Network/virtualNetworks/private-dns-resolver-uksouth-vnet-prod-int"
+    "/subscriptions/0978315c-75fe-4ada-9d11-1eb5e0e0b214/resourceGroups/private-dns-resolver-uksouth-prod-int/providers/Microsoft.Network/virtualNetworks/private-dns-resolver-uksouth-vnet-prod-int",
+    "/subscriptions/c170c61a-f00f-4295-a718-634e27af1597/resourceGroups/ExternalSpoke-rg/providers/Microsoft.Network/virtualNetworks/vnet-prod-ext-01"
 ]
