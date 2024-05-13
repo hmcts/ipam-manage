@@ -10,7 +10,7 @@ function add_external_cidr() {
 
     # filtering the effective routes IPs with the appropriate CIDR starting with
     output_filter=$(echo "$output" | jq '[.[] | select(.addressPrefix[0] | startswith("'"$startswith"'"))]')
-    echo $output_filter
+    
     # convert the filtered data into format that ipam api accepts
     converted_output=$(echo "$output_filter" | jq -r 'to_entries | map({name: ("external" + (.key + 1 | tostring)), desc: .value.nextHopType, cidr: .value.addressPrefix[0]})')
     
