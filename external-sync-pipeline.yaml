@@ -24,8 +24,8 @@ jobs:
       name: 'hmcts-cftptl-agent-pool'
     steps:
       - task: AzureCLI@2
-        displayName: 'Service Principal Check - Dev Tenant'
+        displayName: 'Run External Script'
         inputs:
           scriptType: bash
           scriptPath: ./external.sh
-          azureSubscription: ${{ variables.dev_service_connection }}
+          azureSubscription: ${{ variables.service_connection }}
