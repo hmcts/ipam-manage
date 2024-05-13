@@ -1,0 +1,32 @@
+---
+name: IPAM management
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+
+pr: none # Disable pull request triggers.
+
+variables:
+  - name: service_connection
+    value: dts-management-prod-intsvc
+
+jobs:
+  - job: RunExternalScript
+    timeoutInMinutes: 20
+    pool:
+      name: 'hmcts-cftptl-agent-pool'
+    steps:
+      - task: AzureCLI@2
+        displayName: 'Run ipam manage script'
+        inputs:
+          scriptType: bash
+          scriptPath: ./ipam.sh
+          azureSubscription: ${{ variables.service_connection }}
+      - task: AzureCLI@2
+        displayName: 'Run External Script'
+        inputs:
+          scriptType: bash
+          scriptPath: ./external.sh
+          azureSubscription: ${{ variables.service_connection }}
