@@ -30,7 +30,7 @@ In order to access the IPAM apis, you will need to make sure you are **connected
 `
 To access the APIs, this is the base URL to use - https://ipam.hmcts.net/  and then you can select which API you would like to access from this document list here - https://ipam.hmcts.net/api/docs
 
-**Please note that the  Docs portal doesn't work at the moment and its known problem with Azure IPAM developer team**
+**Please note that the Docs portal doesn't allow you to make API calls at the moment and its known problem with Azure IPAM developer team**
 
 ### API example with Postman
 
