@@ -1,5 +1,5 @@
 ---
-name: IPAM - Sync External CIDRs
+name: IPAM - Sync Vnets & External Routes
 trigger:
   batch: true
   branches:
@@ -8,7 +8,10 @@ trigger:
   paths:
     include:
       - ./external.sh
-      - external-sync-pipeline.yaml
+      - ./external-sync-pipeline.yaml
+      - ./sync-vnets.sh
+      - ./function.sh
+      - ./findoverlapping.py
 schedules:
   - cron: '0 3 * * *'
     displayName: Runs 3 AM everyday
@@ -31,7 +34,13 @@ jobs:
       name: 'hmcts-cftptl-agent-pool'
     steps:
       - task: AzureCLI@2
-        displayName: 'Run External Script'
+        displayName: 'Sync vnets Script'
+        inputs:
+          scriptType: bash
+          scriptPath: ./sync-vnets.sh
+          azureSubscription: ${{ variables.service_connection }}
+      - task: AzureCLI@2
+        displayName: 'Sync External Effective Routes'
         inputs:
           scriptType: bash
           scriptPath: ./external.sh

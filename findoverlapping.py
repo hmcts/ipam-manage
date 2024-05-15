@@ -30,23 +30,24 @@ def find_overlapping_cidrs(json_file, cidr_list):
                     del data[i]
                     
     # Remove overlapping CIDRs from the internal vnet cidr_list
-    cidr_list = json.loads(cidr_list)
+    if cidr_list != "":
+        cidr_list_temp = json.loads(cidr_list)
 
-    for sublist in cidr_list:
-        for cidr_string in sublist:
-            
-            cidr1 = ipaddress.ip_network(cidr_string)
-            
-            # Iterate over the JSON data
-            for j in range(len(data)):
-                cidr2 = ipaddress.ip_network(data[j]['cidr'])
+        for sublist in cidr_list_temp:
+            for cidr_string in sublist:
+                
+                cidr1 = ipaddress.ip_network(cidr_string)
+                
+                # Iterate over the JSON data
+                for j in range(len(data)):
+                    cidr2 = ipaddress.ip_network(data[j]['cidr'])
 
-                if cidr1.overlaps(cidr2):
-                    print(f"{cidr1} VNET cidr overlaps with {cidr2} external in cidr_list")
-                    print(f"Overlapping CIDRs: {data[j]} deleted from external json file")
-                    # Remove the JSON object
-                    del data[j]
-                    break  # Exit the inner loop after deleting the JSON object
+                    if cidr1.overlaps(cidr2):
+                        print(f"{cidr1} VNET cidr overlaps with {cidr2} external in cidr_list")
+                        print(f"Overlapping CIDRs: {data[j]} deleted from external json file")
+                        # Remove the JSON object
+                        del data[j]
+                        break  # Exit the inner loop after deleting the JSON object
 
 
     with open(json_file, 'w') as f:

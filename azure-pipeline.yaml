@@ -5,6 +5,11 @@ trigger:
   branches:
     include:
       - master
+  paths:
+    include:
+      - ./ipam.sh
+      - ./azure-pipeline.yaml
+      - ./function.sh
 
 pr: none # Disable pull request triggers.
 
@@ -23,10 +28,4 @@ jobs:
         inputs:
           scriptType: bash
           scriptPath: ./ipam.sh
-          azureSubscription: ${{ variables.service_connection }}
-      - task: AzureCLI@2
-        displayName: 'Run External Script'
-        inputs:
-          scriptType: bash
-          scriptPath: ./external.sh
           azureSubscription: ${{ variables.service_connection }}

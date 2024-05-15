@@ -17,14 +17,6 @@ function add_blocks(){
     echo -e "\n"
 }
 
-function associate_vnets(){
-    space=$1
-    block=$2
-    jsonfile=$3
-    ./function.sh put "$(cat $jsonfile)"  "/api/spaces/$space/blocks/$block/networks"
-    echo -e "\n"
-}
-
 function setup(){
 
     # create space and  block
@@ -35,10 +27,6 @@ function setup(){
     block_10="$env""_10"
     cidr_10="10.0.0.0/8"
     add_blocks $env $block_10 $cidr_10
-
-    # associate blocks to vnets
-    jsonfile="$env""_vnets.json"
-    associate_vnets $env $block_10 $jsonfile
 
     block_172="$env""_172"
     cidr_172="172.0.0.0/8"

@@ -11,9 +11,9 @@ More info available here - https://azure.github.io/ipam/#/README
 |             | status |
 |-------------|------------|
 | **master** | [![Build Status](https://dev.azure.com/hmcts/DevOps/_apis/build/status/IPAM%20management?branchName=master)](https://dev.azure.com/hmcts/DevOps/_build?definitionId=980) |
-| **External Sync** | [![Build Status](https://dev.azure.com/hmcts/DevOps/_apis/build/status/IPAM%20-%20Sync%20External%20CIDRs?branchName=master)](https://dev.azure.com/hmcts/DevOps/_build?definitionId=979) |
+| **Sync Vnets & External Routes** | [![Build Status](https://dev.azure.com/hmcts/DevOps/_apis/build/status/IPAM%20-%20Sync%20External%20CIDRs?branchName=master)](https://dev.azure.com/hmcts/DevOps/_build?definitionId=979) |
 
-The External Sync pipeline is set to run every day at 3AM so that data is always up to date.
+The Sync Vnets & External Routes pipeline is set to run every day at 3AM so that data is always up to date. Whenever new vnet is added to any environment, the pipeline will pick it automatically overnight and associate it with relevant environment block.
 
 
 ## Setup
@@ -28,7 +28,6 @@ You will need name of the space and block when you are querying APIs.
 
 In order to access the IPAM apis, you will need to make sure you are **connected to the F5 VPN** or you can access from the internal VMs e.g. `bastion-prod
 `
-
 To access the APIs, this is the base URL to use - https://ipam.hmcts.net/  and then you can select which API you would like to access from this document list here - https://ipam.hmcts.net/api/docs
 
 **Please note that the  Docs portal doesn't work at the moment and its known problem with Azure IPAM developer team**

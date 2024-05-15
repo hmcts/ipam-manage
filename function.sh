@@ -18,7 +18,8 @@ getstatus="$base""/api/status"
 
 # Make a GET request
 get_request() {
-    curl -X GET -H "Authorization: Bearer $bearer_token" "$url"
+    response=$(curl -X GET -H "Authorization: Bearer $bearer_token" "$url")
+    echo "$response";
 }
 
 # Make a POST request
@@ -36,7 +37,7 @@ delete_request() {
     curl -X DELETE -H "Authorization: Bearer $bearer_token" -H "Content-Type: application/json" -d "$json_body" "$url"
 }
 
-# Make a DELETE request
+# Make a status request
 get_status() {
     response=$(curl -X GET -H "Authorization: Bearer $bearer_token" "$getstatus")
     echo "$response";
