@@ -28,7 +28,7 @@ variables:
 
 
 jobs:
-  - job: RunExternalScript
+  - job: RunSyncScripts
     timeoutInMinutes: 20
     pool:
       name: 'hmcts-cftptl-agent-pool'

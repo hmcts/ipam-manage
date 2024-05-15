@@ -18,7 +18,7 @@ variables:
     value: dts-management-prod-intsvc
 
 jobs:
-  - job: RunExternalScript
+  - job: Run
     timeoutInMinutes: 20
     pool:
       name: 'hmcts-cftptl-agent-pool'
