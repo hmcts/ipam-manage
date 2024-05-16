@@ -4,11 +4,6 @@ trigger:
   branches:
     include:
       - master
-  paths:
-    include:
-      - ./ipam.sh
-      - ./azure-pipeline.yaml
-      - ./function.sh
 
 pr: none # Disable pull request triggers.
 
