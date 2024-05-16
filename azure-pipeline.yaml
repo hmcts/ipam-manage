@@ -1,7 +1,6 @@
 ---
 name: IPAM management
 trigger:
-  batch: true
   branches:
     include:
       - master

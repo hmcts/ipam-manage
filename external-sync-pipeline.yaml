@@ -1,7 +1,6 @@
 ---
 name: IPAM - Sync Vnets & External Routes
 trigger:
-  batch: true
   branches:
     include:
     - master
@@ -13,8 +12,8 @@ trigger:
       - ./function.sh
       - ./findoverlapping.py
 schedules:
-  - cron: '0 3 * * *'
-    displayName: Runs 3 AM everyday
+  - cron: '0 9 * * *'
+    displayName: Runs 9 AM everyday
     branches:
       include:
         - master
