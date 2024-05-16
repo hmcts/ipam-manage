@@ -6,11 +6,11 @@ trigger:
     - master
   paths:
     include:
-      - ./external.sh
-      - ./external-sync-pipeline.yaml
-      - ./sync-vnets.sh
-      - ./function.sh
-      - ./findoverlapping.py
+      - external.sh
+      - external-sync-pipeline.yaml
+      - sync-vnets.sh
+      - function.sh
+      - findoverlapping.py
 schedules:
   - cron: '0 9 * * *'
     displayName: Runs 9 AM everyday
