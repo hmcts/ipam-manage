@@ -34,7 +34,9 @@ To access the APIs, this is the base URL to use - https://ipam.hmcts.net/  and t
 
 ### API example with Postman
 
-Below is example of `/api/tools/nextAvailableVNet` using Postman.  This API allow us to find next available Vnet space.
+#### Step 1 - Get the next available vnet space
+
+Below is example of `https://ipam.hmcts.net/api/tools/nextAvailableVNet` using Postman.  This API allow us to find next available Vnet space.
 
 Get the Token after you logged in to the [IPAM portal](https://ipam.hmcts.net/)
 
@@ -50,22 +52,55 @@ In the Body section, select Raw and Json type.   You can then copy the body data
 
 <img src=images/body-ipam-api.png width="400">
 
+#### Step 2 - Reserve the next available vnet space
+
+If you are happy with the range you are getting, run the reservation command to reserve the address space.
+
+POST API call to `https://ipam.hmcts.net/api/spaces/sbox/blocks/sbox_10/reservations`
+
+Body of the request should be in below format.  Please replace the `cidr` value with value you have got from above API call.
+
+```json
+{
+    "cidr": "10.0.100.0/24",
+    "desc" "New CIDR for Business Unit 1"
+}
+```
+<img src=images/body-ipam-reservation.png width="400">
+
 ### API example with Shell commands
+
+#### Step 1 - Get the next available vnet space
 
 Below is example of `/api/tools/nextAvailableVNet` using Shell commands.
 
 ```bash
 bearer_token=$(az account get-access-token --resource=api://3fa0259b-86c8-4cd7-bd2a-e5ab28625fe7 --query accessToken --output tsv)
 json_body='{
-  "space": "prod",
+  "space": "sbox",
   "blocks": [
-    "prod_10"
+    "sbox_10"
   ],
   "size": 22,
   "reverse_search": false,
   "smallest_cidr": false
 }'
 url="https://ipam.hmcts.net/api/tools/nextAvailableVNet"
+
+curl -X POST -H "Authorization: Bearer $bearer_token" -H "Content-Type: application/json" -d "$json_body" "$url"
+```
+
+#### Step 2 - Reserve the next available vnet space
+
+Please replace the `cidr` value with value you have got from above API call.
+
+```bash
+bearer_token=$(az account get-access-token --resource=api://3fa0259b-86c8-4cd7-bd2a-e5ab28625fe7 --query accessToken --output tsv)
+json_body='{
+    "cidr": "10.1.16.0/22",
+    "desc": "New CIDR for Business Unit 1"
+}'
+url="https://ipam.hmcts.net/api/spaces/sbox/blocks/sbox_10/reservations"
 
 curl -X POST -H "Authorization: Bearer $bearer_token" -H "Content-Type: application/json" -d "$json_body" "$url"
 ```

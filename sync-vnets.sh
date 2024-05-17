@@ -26,18 +26,23 @@ function call_json_config() {
     subscriptions=$2
 
     block="$space""_10"
+    ./reservations.sh "$space" "$block"
     json_config $space $block "$subscriptions"
     
     block="$space""_172"
+    ./reservations.sh "$space" "$block"
     json_config $space $block "$subscriptions"
 
     block="$space""_163"
+    ./reservations.sh "$space" "$block"
     json_config $space $block "$subscriptions"
 
     block="$space""_198"
+    ./reservations.sh "$space" "$block"
     json_config $space $block "$subscriptions"
 
     block="$space""_192"
+    ./reservations.sh "$space" "$block"
     json_config $space $block "$subscriptions"
 
 
