@@ -12,8 +12,8 @@ trigger:
       - function.sh
       - findoverlapping.py
 schedules:
-  - cron: '0 9 * * *'
-    displayName: Runs 9 AM everyday
+  - cron: '0 8 * * 1-5'
+    displayName: Runs at 8 AM(UTC) from Monday to Friday
     branches:
       include:
         - master
