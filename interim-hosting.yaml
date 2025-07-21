@@ -1,0 +1,5 @@
+prod:
+  subnets:
+    - cidr: "10.23.8.32/27"
+      name: "IH-ARKF-MGMT-FamilymanDBTierMGMT"
+      desc: "Interim Hosting - ARKF - MGMT - FamilymanDBTierMGMT"
