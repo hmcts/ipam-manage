@@ -120,50 +120,6 @@ function run_env() {
     add_external_cidr "$space" "$block_192" "$startswith_192" "$output" "$vnet_data"
 }
 
-# The following function updates the external subnets in the prod space, based on interim hosting YAML file
-# It reads the YAML file and updates the corresponding external subnets in the IPAM API
-# function update_prod_prod10_interim_hosting_subnets() {
-    
-#     api_url="https://ipam.hmcts.net/api/spaces/prod/blocks/prod_10/externals"
-#     yaml_file="interim-hosting.yaml"
-    # Set your bearer token here or export BEARER_TOKEN in your environment
-#     BEARER_TOKEN=$(az account get-access-token --resource=api://3fa0259b-86c8-4cd7-bd2a-e5ab28625fe7 --query accessToken --output tsv)
-
-#    externals_json=$(curl -s -H "Authorization: Bearer $BEARER_TOKEN" -H "Content-Type: application/json" "$api_url")
-    
-    # Loop through each subnet in the YAML file
-#     yq -o=json '.prod.subnets[]' interim-hosting.yaml | jq -c '.' | while read -r subnet; do
-
-#         yaml_cidr=$(echo "$subnet" | yq '.cidr')
-#         yaml_name=$(echo "$subnet" | yq '.name')
-#         yaml_desc=$(echo "$subnet" | yq '.desc')
-
-        # Loop through each external subnet in the API response
-#         echo "$externals_json" | jq -c '.[]' | while read -r api_record; do
-#             api_cidr=$(echo "$api_record" | jq -r '.cidr')
-#             api_name=$(echo "$api_record" | jq -r '.name')
-            
-            # Read the YAML file and process each subnet
-#             if [[ "$yaml_cidr" == "$api_cidr" ]]; then # If it exists in the API then update it
-#                 patch_url="https://ipam.hmcts.net/api/spaces/prod/blocks/prod_10/externals/$api_name"
-#                 patch_payload=$(jq -n \
-#                   --arg name "$yaml_name" \
-#                   --arg desc "$yaml_desc" \
-#                   '[{"op":"replace","path":"/name","value":$name},{"op":"replace","path":"/desc","value":$desc}]')
-#                 curl -X PATCH -H "Content-Type: application/json" -H "Authorization: Bearer $BEARER_TOKEN" -d "$patch_payload" "$patch_url"
-#             else # If it does not exist in the API then create it
-#                 post_url="https://ipam.hmcts.net/api/spaces/prod/blocks/prod_10/externals"
-#                 post_payload=$(jq -n \
-#                   --arg name "$yaml_name" \
-#                   --arg desc "$yaml_desc" \
-#                   --arg cidr "$yaml_cidr" \
-#                   '{name: $name, desc: $desc, cidr: $cidr}')
-#                 curl -X POST -H "Content-Type: application/json" -H "Authorization: Bearer $BEARER_TOKEN" -d "$post_payload" "$post_url"
-#             fi
-#         done
-#     done
-# }
-
 space="nonprod"
 name="hmcts-hub-nonprodi-nic-transit-public-0"
 subscription="HMCTS-HUB-NONPROD-INTSVC"
