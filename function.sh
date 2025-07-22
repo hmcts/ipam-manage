@@ -32,6 +32,11 @@ put_request() {
     curl -X PUT -H "Authorization: Bearer $bearer_token" -H "Content-Type: application/json" -d "$json_body" "$url"
 }
 
+# Make a Patch request
+patch_request() {
+    curl -X PATCH -H "Authorization: Bearer $bearer_token" -H "Content-Type: application/json" -d "$json_body" "$url"
+}
+
 # Make a DELETE request
 delete_request() {
     curl -X DELETE -H "Authorization: Bearer $bearer_token" -H "Content-Type: application/json" -d "$json_body" "$url"
@@ -63,6 +68,8 @@ else
                 post_request ;;
             put)
                 put_request ;;
+            patch)
+                patch_request ;;
             delete)
                 delete_request ;;
             *)
