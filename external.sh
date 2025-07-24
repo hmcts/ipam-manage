@@ -57,41 +57,41 @@ function run_env() {
     output=$(az network nic show-effective-route-table --name $name --resource-group $rg --query "value[?nextHopType=='VirtualNetworkGateway' && !contains(addressPrefix, '10.0.0.0/8')]")
     
     block_10="$space""_10"
+    
+    # Define the YAML path for the subnets
+    yaml_space=".""$space"".subnets[]"
 
-    yaml_file="interim-hosting.yaml"
-    externals_json= ./function.sh get '' "api/spaces/$space/blocks/$block_10/externals"
+    # Fetching the externals for the block_10
+    externals_json=$(./function.sh get '' "/api/spaces/$space/blocks/$block_10/externals")
 
-    yq -o=json '.$space.subnets[]' interim-hosting.yaml | jq -c '.' | while read -r subnet; do
+    # Loop through each subnet in the YAML file
+    yq -o=json $yaml_space interim-hosting.yaml | jq -c '.' | while read -r subnet; do
 
         yaml_cidr=$(echo "$subnet" | yq '.cidr')
         yaml_name=$(echo "$subnet" | yq '.name')
         yaml_desc=$(echo "$subnet" | yq '.desc')
 
-        # Loop through each external subnet in the API response
-        echo "$externals_json" | jq -c '.[]' | while read -r api_record; do
-            api_cidr=$(echo "$api_record" | jq -r '.cidr')
-            api_name=$(echo "$api_record" | jq -r '.name')
-            
-            # Read the YAML file and process each subnet
-            if [[ "$yaml_cidr" == "$api_cidr" ]]; then # If it exists in the API then update it
-                patch_payload=$(jq -n \
-                  --arg name "$yaml_name" \
-                  --arg desc "$yaml_desc" \
-                  '[{"op":"replace","path":"/name","value":$name},{"op":"replace","path":"/desc","value":$desc}]')
-                
-                ./function.sh patch "$patch_payload" "api/spaces/$space/blocks/$block_10/externals/$api_name"
-
-            else # If it does not exist in the API then create it
-                post_payload=$(jq -n \
-                  --arg name "$yaml_name" \
-                  --arg desc "$yaml_desc" \
-                  --arg cidr "$yaml_cidr" \
-                  '{name: $name, desc: $desc, cidr: $cidr}')
-
-                ./function.sh post "$post_payload" "api/spaces/$space/blocks/$block_10/externals"
-            fi
-        done
-    done
+        # Filter the externals JSON to find matching CIDRs
+        matching_externals=$(echo "$externals_json" | jq -c --arg cidr "$yaml_cidr" '[.[] | select(.cidr == $cidr)]')
+        
+        # If matching externals exist, patch them; otherwise, create a new external
+        if [[ $(echo "$matching_externals" | jq 'length') -gt 0 ]]; then
+            api_name=$(echo "$matching_externals" | jq -r '.[0].name')
+            patch_payload=$(jq -n \
+              --arg name "$yaml_name" \
+              --arg desc "$yaml_desc" \
+              '[{"op":"replace","path":"/name","value":$name},{"op":"replace","path":"/desc","value":$desc}]')
+            ./function.sh patch "$patch_payload" "/api/spaces/$space/blocks/$block_10/externals/$api_name"       
+        else # Create a new external if it doesn't exist
+            post_payload=$(jq -n \
+              --arg name "$yaml_name" \
+              --arg desc "$yaml_desc" \
+              --arg cidr "$yaml_cidr" \
+              '{name: $name, desc: $desc, cidr: $cidr}')
+            result=$(./function.sh post "$post_payload" "/api/spaces/$space/blocks/$block_10/externals")
+        fi
+        
+    done # End of loop through subnets yaml file
 
     vnet_data=""
 

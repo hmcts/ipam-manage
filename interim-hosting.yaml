@@ -1,5 +1,13 @@
 prod:
   subnets:
     - cidr: "10.23.8.32/27"
-      name: "IH-ARKF-MGMT-FamilymanDBTierMGMT"
-      desc: "Interim Hosting - ARKF - MGMT - FamilymanDBTierMGMT"
+      name: "IH-ARKF-MGMT-Test24th"
+      desc: "Interim Hosting - Test24th"
+    - cidr: "10.23.8.0/27"
+      name: "IH-ARKF-MGMT-FTEST24th"
+      desc: "Interim Hosting - ARKF - MGMT - FMTEST24th"
+nonprod:
+  subnets:
+    - cidr: "10.25.19.112/28"
+      name: "IH-ARKC-TESTTEST24th"
+      desc: "Interim Hosting - ARKC - 6DGTRANSIT - Test24th"
