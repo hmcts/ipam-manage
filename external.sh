@@ -56,9 +56,45 @@ function run_env() {
     # getting all the effective routes from the NIC
     output=$(az network nic show-effective-route-table --name $name --resource-group $rg --query "value[?nextHopType=='VirtualNetworkGateway' && !contains(addressPrefix, '10.0.0.0/8')]")
     
+    block_10="$space""_10"
+    
+    # Define the YAML path for the subnets
+    yaml_space=".""$space"".subnets[]"
+
+    # Fetching the externals for the block_10
+    externals_json=$(./function.sh get '' "/api/spaces/$space/blocks/$block_10/externals")
+
+    # Loop through each subnet in the YAML file
+    yq -o=json $yaml_space interim-hosting.yaml | jq -c '.' | while read -r subnet; do
+
+        yaml_cidr=$(echo "$subnet" | yq '.cidr')
+        yaml_name=$(echo "$subnet" | yq '.name')
+        yaml_desc=$(echo "$subnet" | yq '.desc')
+
+        # Filter the externals JSON to find matching CIDRs
+        matching_externals=$(echo "$externals_json" | jq -c --arg cidr "$yaml_cidr" '[.[] | select(.cidr == $cidr)]')
+        
+        # If matching externals exist, patch them; otherwise, create a new external
+        if [[ $(echo "$matching_externals" | jq 'length') -gt 0 ]]; then
+            api_name=$(echo "$matching_externals" | jq -r '.[0].name')
+            patch_payload=$(jq -n \
+              --arg name "$yaml_name" \
+              --arg desc "$yaml_desc" \
+              '[{"op":"replace","path":"/name","value":$name},{"op":"replace","path":"/desc","value":$desc}]')
+            ./function.sh patch "$patch_payload" "/api/spaces/$space/blocks/$block_10/externals/$api_name"       
+        else # Create a new external if it doesn't exist
+            post_payload=$(jq -n \
+              --arg name "$yaml_name" \
+              --arg desc "$yaml_desc" \
+              --arg cidr "$yaml_cidr" \
+              '{name: $name, desc: $desc, cidr: $cidr}')
+            result=$(./function.sh post "$post_payload" "/api/spaces/$space/blocks/$block_10/externals")
+        fi
+        
+    done # End of loop through subnets yaml file
+
     vnet_data=""
 
-    block_10="$space""_10"
     vnet_data=$(./function.sh get '' "/api/spaces/$space/blocks/$block_10/available")
     startswith_10="10."
     add_external_cidr "$space" "$block_10" "$startswith_10" "$output" "$vnet_data"
@@ -73,7 +109,6 @@ function run_env() {
     startswith_163="163."
     add_external_cidr "$space" "$block_163" "$startswith_163" "$output" "$vnet_data"
 
-
     block_198="$space""_198"
     vnet_data=$(./function.sh get '' "/api/spaces/$space/blocks/$block_198/available")
     startswith_198="198."
@@ -84,6 +119,7 @@ function run_env() {
     startswith_192="192."
     add_external_cidr "$space" "$block_192" "$startswith_192" "$output" "$vnet_data"
 }
+
 space="nonprod"
 name="hmcts-hub-nonprodi-nic-transit-public-0"
 subscription="HMCTS-HUB-NONPROD-INTSVC"
